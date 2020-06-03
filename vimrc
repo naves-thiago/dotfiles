@@ -109,7 +109,7 @@ function! s:SplitToTab()
 
 	let top_line = line('w0')
 	let cursor_pos = getpos('.')
-	let curr_buffer = bufnr()
+	let curr_buffer = bufnr('%')
 
 	" Load the buffer in the new tab
 	" silent execute 'b ' . curr_buffer
