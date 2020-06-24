@@ -61,6 +61,7 @@ set splitright
 set splitbelow
 
 let g:completor_auto_trigger=1
+let g:completor_clang_binary='/usr/bin/clang'
 "inoremap <expr> <Tab> pumvisible() ? "<C-N>" : "<C-R>=completor#do('complete')<CR>"
 inoremap <expr> <C-P> pumvisible() ? "<C-N>" : "<C-R>=completor#do('complete')<CR>"
 
