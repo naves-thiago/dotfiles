@@ -32,7 +32,16 @@ set softtabstop=4
 
 "color default
 "color koehler
-color koehler_thiago
+"color koehler_thiago
+packadd! dracula
+colorscheme dracula
+"syntax enable
+
+augroup dracula_customization
+	au!
+	autocmd ColorScheme dracula hi Normal ctermfg=253 ctermbg=black guifg=#F8F8F2 guibg=#282A36
+augroup END
+
 set nohidden " no hidden open buffers
 set history=1000
 runtime macros/matchit.vim
