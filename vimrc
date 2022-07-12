@@ -29,6 +29,7 @@ set smarttab      " make <tab> and <backspace> smarter
 set tabstop=4     " tabstops of 4
 set softtabstop=4
 " set textwidth=80	" screen in 80 columns wide, wrap at 78
+" let g:indentLine_setConceal = 0 " stop indentLine plugin from hidding quotes in json. this breaks the plugin
 
 "color default
 "color koehler
@@ -106,11 +107,14 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+"""""""""""""""""""""
 
 " Symbol renaming.
-"nmap <leader>rn <Plug>(coc-rename)
-nmap <F2> <Plug>(coc-rename)
-"""""""""""""""""""""
+map <F2> <Plug>(coc-rename)
+
+" Navigate snippet placeholders
+let g:coc_snippet_next = '<c-j>'
+let g:coc_snippet_prev = '<c-k>'
 
 """"""" NERDTree """"""""
 " Check if NERDTree is open or active
